@@ -28,18 +28,18 @@ train_610 = train_dir[0][:direction]
 
 puts train_610
 
-# # #4
-# north_trains_info = trains.select{ |direction| direction[:direction] == "north"}
-# north_trains = []
-# north_trains_info.each { |name| north_trains << name[:train] }
-# puts north_trains
-#
-#
-# # #5
-# east_trains_info = trains.select{ |direction| direction[:direction] == "east"}
-# east_trains = []
-# east_trains_info.each { |name| east_trains << name[:train] }
-# puts east_trains
+# #4
+north_trains_info = trains.select{ |direction| direction[:direction] == "north"}
+north_trains = []
+north_trains_info.each { |name| north_trains << name[:train] }
+puts north_trains
+
+
+# #5
+east_trains_info = trains.select{ |direction| direction[:direction] == "east"}
+east_trains = []
+east_trains_info.each { |name| east_trains << name[:train] }
+puts east_trains
 
 
 #6
@@ -52,3 +52,8 @@ end
 
 train_directions("north", trains)
 train_directions("east", trains)
+
+#7
+trains[5].merge!(:departure => 900)
+
+puts trains

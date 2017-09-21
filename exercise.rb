@@ -27,3 +27,11 @@ train_dir = trains.select{ |train| train[:train]=="610"   }
 train_610 = train_dir[0][:direction]
 
 puts train_610
+
+#4
+north_trains_info = trains.select{ |direction| direction[:direction] == "north"}
+north_trains = []
+north_trains_info.each { |name| north_trains << name[:train] }
+north_trains
+
+#5

@@ -32,6 +32,11 @@ puts train_610
 north_trains_info = trains.select{ |direction| direction[:direction] == "north"}
 north_trains = []
 north_trains_info.each { |name| north_trains << name[:train] }
-north_trains
+puts north_trains
+
 
 #5
+east_trains_info = trains.select{ |direction| direction[:direction] == "east"}
+east_trains = []
+east_trains_info.each { |name| east_trains << name[:train] }
+puts east_trains
